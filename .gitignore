@@ -21,3 +21,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Generated files
+/.metadata/
+/.recommenders/
+bin/
+gen/
+out/
+.settings
+.classpath
+.project
