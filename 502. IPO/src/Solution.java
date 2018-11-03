@@ -10,10 +10,14 @@ import java.util.PriorityQueue;
 public class Solution {
 
     public static void main(String[] args) {
-
+        int k = 2;
+        int W = 0;
+        int[] Profits = { 1, 2, 3 };
+        int[] Capital = { 0, 1, 1 };
+        System.out.println(findMaximizedCapital(k, W, Profits, Capital));
     }
 
-    public int findMaximizedCapital(int k, int W, int[] Profits, int[] Capital) {
+    public static int findMaximizedCapital(int k, int W, int[] Profits, int[] Capital) {
         // 这个队列按照收益从大到小排序，且只包含能启动的项目
         PriorityQueue<Project> profitQueue = new PriorityQueue<>((o1, o2) -> o2.profits - o1.profits);
         // 这个队列按照启动资本从小到大排序，且只包含目前资本 W 不能启动的项目
