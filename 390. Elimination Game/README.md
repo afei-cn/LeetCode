@@ -111,4 +111,4 @@
 
 # 实现:
 
-[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/502.%20IPO/src/Solution.java)
+[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/390.%20Elimination%20Game/src/Solution.java)
