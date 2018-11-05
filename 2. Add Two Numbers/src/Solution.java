@@ -31,24 +31,18 @@ public class Solution {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = null; // the first node
         ListNode tail = null; // the last node
-        byte carryBit = 0;
+        int carryBit = 0;
         while (l1 != null || l2 != null || carryBit == 1) {
             int a = (l1 == null ? 0 : l1.val);
             int b = (l2 == null ? 0 : l2.val);
-            int val = a + b + carryBit;
-            if (val >= 10) {
-                carryBit = 1;
-                val -= 10;
-            } else {
-                carryBit = 0;
-            }
+            int sum = a + b + carryBit;
+            carryBit = sum / 10;
             if (head == null) {
-                head = new ListNode(val);
+                head = new ListNode(sum);
                 tail = head;
             } else {
-                ListNode temp = new ListNode(val);
-                tail.next = temp;
-                tail = temp;
+                tail.next = new ListNode(sum % 10);
+                tail = tail.next;
             }
             l1 = (l1 == null ? null : l1.next);
             l2 = (l2 == null ? null : l2.next);
