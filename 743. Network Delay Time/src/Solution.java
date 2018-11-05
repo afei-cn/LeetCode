@@ -37,7 +37,8 @@ public class Solution {
         }
         // dijkstra
         while (!queue.isEmpty()) {
-            NetNode min = queue.poll(); // 取出一个 time 最小的 node
+            // extra min
+            NetNode min = queue.poll();
             if (min.distance == Integer.MAX_VALUE) {
                 return -1; // 无法到达的点
             }
@@ -56,7 +57,9 @@ public class Solution {
         // find max
         int max = 0;
         for (Map.Entry<Integer, NetNode> entry : map.entrySet()) {
-            max = Math.max(max, entry.getValue().distance);
+            if (entry.getValue().distance > max) {
+                max = entry.getValue().distance;
+            }
         }
         return max;
     }
