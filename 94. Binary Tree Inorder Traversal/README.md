@@ -6,11 +6,11 @@
 
 > **输入：** [1, null, 2, 3]
 >
->   1
->    \
->     2
->    /
->   3
+> &nbsp;&nbsp;1  
+> &nbsp;&nbsp;&nbsp;&nbsp;\\  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2  
+> &nbsp;&nbsp;&nbsp;&nbsp;/  
+> &nbsp;&nbsp;3
 >
 > **输出：** [1, 3, 2]
 
