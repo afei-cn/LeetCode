@@ -15,34 +15,43 @@ public class Solution {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        List<Integer> list = preorderTraversal(root);
+        List<Integer> list = postorderTraversal(root);
         for (int i : list) {
             System.out.print(i + " ");
         }
     }
 
-    public static List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
+        if (root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
-        while (current != null || !stack.isEmpty()) {
-            if (current != null) {
-                list.add(current.val);
-                stack.push(current);
-                current = current.left;
+        stack.push(current);
+        stack.push(current); // 每个结点 push 两次，这样可以简单的判断出哪些结点是否处理过
+        while (!stack.isEmpty()) {
+            current = stack.pop();
+            if (!stack.isEmpty() && current == stack.peek()) {
+                if (current.right != null) {
+                    stack.push(current.right);
+                    stack.push(current.right);
+                }
+                if (current.left != null) {
+                    stack.push(current.left);
+                    stack.push(current.left);
+                }
             } else {
-                current = stack.pop().right;
+                list.add(current.val);
             }
         }
         return list;
     }
     
     // Recursive Version
-    public static void preorderTraversal2(TreeNode root) {
+    public static void postorderTraversal2(TreeNode root) {
         if (root == null) return;
+        postorderTraversal2(root.left);
+        postorderTraversal2(root.right);
         System.out.print(root.val + " ");
-        preorderTraversal2(root.left);
-        preorderTraversal2(root.right);
     }
 
     public static class TreeNode {
