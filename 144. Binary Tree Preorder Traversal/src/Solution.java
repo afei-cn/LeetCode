@@ -6,7 +6,7 @@ import java.util.Stack;
  * Copyright © 2018 by afei. All rights reserved.
  * 
  * @author: afei
- * @date: 2018年11月5日
+ * @date: 2018年11月7日
  */
 
 public class Solution {
@@ -27,25 +27,22 @@ public class Solution {
         TreeNode current = root;
         while (current != null || !stack.isEmpty()) {
             if (current != null) {
+                list.add(current.val);
                 stack.push(current);
                 current = current.left;
             } else {
-                current = stack.pop();
-                list.add(current.val);
-                current = current.right;
+                current = stack.pop().right;
             }
         }
         return list;
     }
     
     // Recursive Version
-    public static void inorderTraversal2(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        inorderTraversal2(root.left);
+    public static void preorderTraversal2(TreeNode root) {
+        if (root == null) return;
         System.out.print(root.val + " ");
-        inorderTraversal2(root.right);
+        preorderTraversal2(root.left);
+        preorderTraversal2(root.right);
     }
 
     public static class TreeNode {
