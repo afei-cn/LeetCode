@@ -33,9 +33,11 @@
 
 ### 2. 乘法计算
 
-我们循环遍历两个字符串，将 `num1[i]` 与 `num2[j]` 相乘，并可以将结果存入到 `value[i + j]` 中。
+我们循环遍历两个字符串，将 `num1[i]` 与 `num2[j]` 相乘，并可以将结果存入到 `value[i + j + 1]` 中。
 
-这里我们暂时先不考虑进位的问题，过程大致如下图所示：
+这里我们暂时先不考虑进位的问题，过程大致如下图所示（模拟 1234\*25 的过程）：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20181109082035652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FmZWlfXw==,size_16,color_FFFFFF,t_70)
 
 ### 3. 处理进位
 
