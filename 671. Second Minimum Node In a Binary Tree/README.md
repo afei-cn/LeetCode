@@ -10,9 +10,9 @@
 >
 > &nbsp;&nbsp;&nbsp;2  
 > &nbsp;&nbsp;/&nbsp;&nbsp;\\  
-> 2&nbsp;&nbsp;&nbsp;5  
-> &nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\\  
-> &nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;7
+> 2&nbsp;&nbsp;&nbsp;&nbsp;5  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\\  
+> &nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;7
 >
 > **输出：** 5
 >
@@ -39,3 +39,5 @@
 其次，如果某个节点的值等于根节点的值，那么我们就继续在其子节点中查找；如果大于根节点的值，我们就将这个值拿出来比较，并停止遍历它的子节点了，因为它的子节点不会再有小于它的值了。
 
 ### 实现
+
+[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/671.%20Second%20Minimum%20Node%20In%20a%20Binary%20Tree/src/Solution.java)
