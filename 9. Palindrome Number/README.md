@@ -33,3 +33,5 @@
 使用字符串的解法很多，这里介绍不使用字符串的方式。使用一个数 `reverse` 作为输入数的反转，最后判断两数是否相等即可。
 
 # 实现
+
+[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/9.%20Palindrome%20Number/src/Solution.java)
