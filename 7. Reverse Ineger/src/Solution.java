@@ -6,6 +6,9 @@
  */
 
 public class Solution {
+    
+    private static int tenthMax =  Integer.MAX_VALUE / 10;
+    private static int tenthMin =  Integer.MIN_VALUE / 10;
 
     public static void main(String[] args) {
         System.out.println(reverse(Integer.MAX_VALUE));
@@ -15,15 +18,23 @@ public class Solution {
     }
     
     public static int reverse(int x) {
-        long reverse = 0;
+        int reverse = 0;
         while (x != 0) {
-            reverse *= 10;
-            reverse += x % 10;
-            if (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE) {
+            int pop = x % 10;
+            // 如果 temp = rev * 10 + pop 导致溢出
+            // 那么一定有 rev >= Integer.MAX_VALUE / 10
+            // 如果 rev == Integer.MAX_VALUE / 10，只要 pop > 7 也会溢出
+            if (reverse > tenthMax || (reverse == tenthMax && pop > 7)) {
                 return 0;
             }
+            // 对于负数，理由同上
+            if (reverse < tenthMin || (reverse == tenthMin && pop < -8)) {
+                return 0;
+            }
+            reverse *= 10;
+            reverse += pop;
             x /= 10;
         }
-        return (int) reverse;
+        return reverse;
     }
 }
