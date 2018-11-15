@@ -23,12 +23,12 @@ public class Solution {
             return true;
         }
         int origin = x;
-        int reserve = 0;
+        int reverse = 0;
         while (x > 0) {
-            reserve *= 10;
-            reserve += x % 10;
+            reverse *= 10;
+            reverse += x % 10;
             x /= 10;
         }
-        return origin == reserve;
+        return origin == reverse;
     }
 }
