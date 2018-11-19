@@ -22,20 +22,20 @@
 >]
 
 ### 示例 2:
->给定 matrix =
-[
-&nbsp;&nbsp;&nbsp;&nbsp;[ 5, 1, 9,11],
-&nbsp;&nbsp;&nbsp;&nbsp;[ 2, 4, 8,10],
-&nbsp;&nbsp;&nbsp;&nbsp;[13, 3, 6, 7],
-&nbsp;&nbsp;&nbsp;&nbsp;[15,14,12,16]
-], 
+>给定 matrix =  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;[ 5, 1, 9,11],  
+&nbsp;&nbsp;&nbsp;&nbsp;[ 2, 4, 8,10],  
+&nbsp;&nbsp;&nbsp;&nbsp;[13, 3, 6, 7],  
+&nbsp;&nbsp;&nbsp;&nbsp;[15,14,12,16]  
+],  
 >
->原地旋转输入矩阵，使其变为:
-[
-&nbsp;&nbsp;&nbsp;&nbsp;[15,13, 2, 5],
-&nbsp;&nbsp;&nbsp;&nbsp;[14, 3, 4, 1],
-&nbsp;&nbsp;&nbsp;&nbsp;[12, 6, 8, 9],
-&nbsp;&nbsp;&nbsp;&nbsp;[16, 7,10,11]
+>原地旋转输入矩阵，使其变为:  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;[15,13, 2, 5],  
+&nbsp;&nbsp;&nbsp;&nbsp;[14, 3, 4, 1],  
+&nbsp;&nbsp;&nbsp;&nbsp;[12, 6, 8, 9],  
+&nbsp;&nbsp;&nbsp;&nbsp;[16, 7,10,11]  
 ]
 
 # 一、思路
