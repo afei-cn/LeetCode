@@ -41,11 +41,11 @@ public class Solution {
         ListNode result = head.next;
         ListNode pair1 = head;
         ListNode pair2 = head.next;
-        ListNode preview = null;
+        ListNode previous = null;
         // swap
         pair1.next = pair2.next;
         pair2.next = pair1;
-        preview = pair1;
+        previous = pair1;
         pair1 = pair1.next;
 
         while (pair1 != null) {
@@ -54,10 +54,10 @@ public class Solution {
                 break;
             }
             // swap
-            preview.next = pair2;
+            previous.next = pair2;
             pair1.next = pair2.next;
             pair2.next = pair1;
-            preview = pair1;
+            previous = pair1;
             pair1 = pair1.next;
         }
         return result;
