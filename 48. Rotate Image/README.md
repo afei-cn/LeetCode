@@ -7,18 +7,18 @@
 你必须在 **原地** 旋转图像，这意味着你需要直接修改输入的二维矩阵。**请不要** 使用另一个矩阵来旋转图像。
 
 ### 示例 1:
->给定 matrix = 
-[
-&nbsp;&nbsp;&nbsp;&nbsp;[1,2,3],
-&nbsp;&nbsp;&nbsp;&nbsp;[4,5,6],
-&nbsp;&nbsp;&nbsp;&nbsp;[7,8,9]
-],
+>给定 matrix =  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;[1,2,3],  
+&nbsp;&nbsp;&nbsp;&nbsp;[4,5,6],  
+&nbsp;&nbsp;&nbsp;&nbsp;[7,8,9]  
+],  
 >
->原地旋转输入矩阵，使其变为:
-[
-&nbsp;&nbsp;&nbsp;&nbsp;[7,4,1],
-&nbsp;&nbsp;&nbsp;&nbsp;[8,5,2],
-&nbsp;&nbsp;&nbsp;&nbsp;[9,6,3]
+>原地旋转输入矩阵，使其变为:  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;[7,4,1],  
+&nbsp;&nbsp;&nbsp;&nbsp;[8,5,2],  
+&nbsp;&nbsp;&nbsp;&nbsp;[9,6,3]  
 >]
 
 ### 示例 2:
