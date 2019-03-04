@@ -19,4 +19,4 @@
 
 # 二、解答
 
-[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/113.%20Palindrome%20Partitioning/src/Solution.java)
+[Solution.java](https://github.com/afei-cn/LeetCode/blob/master/131.%20Palindrome%20Partitioning/src/Solution.java)
